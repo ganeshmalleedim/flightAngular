@@ -1,0 +1,111 @@
+<p>search-flights works!</p>
+
+
+<form [formGroup]="serachFlightForm">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-5"></div>
+                <div class="col-sm-7">
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div clas="col-sm-3">
+                            <b>Source</b>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" 
+                            formControlName="source"
+                            placeholder="enter source">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div clas="col-sm-3">
+                            <b>Destination</b>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" 
+                            formControlName="destination"
+                            placeholder="enter destination">
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-10">
+                            <button 
+                           type="button"
+                           class="btn btn-lg btn-primary btn-block text-center"
+                           (click)="SearchFlightClick(serachFlightForm.value)">Search</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2 *ngFor="let flight of flightList">
+                    <!-- {{flight.flightName}} -->
+                    <p>
+                        <!-- {{flight.flightName}}
+                    </p>
+                </h2> -->
+
+<div class="row">
+    <div class="col-sm-12">
+        <table style="width: 100%;" class="table table-stripped ">
+           <thead style="background-color: lightskyblue;">
+               <tr>
+                   <th>FlightNo</th>
+                   <th>FlightName</th>
+                   <th>Source</th>
+                   <th>Destination</th>
+                   <th>StartDatetime</th>
+                   <th>EndDateTime</th>
+                  
+                  
+                   <th>Total_Bc_Seats</th>
+                   <th>Total_NBC_seats</th>
+                   <th>OnewayPrice</th>
+                   <th>RoundtripPrice</th>
+                   <th>NoOfRows</th>
+                   <th>Book</th>
+                  
+               </tr>
+           </thead>
+           <tbody>
+               <tr *ngFor="let list of flightList">
+                   <td>{{list.flightNo}}</td>
+                   <td>{{list.flightName}}</td>
+                   
+                   <td>{{list.source}}</td>
+                   <td>{{list.destination}}</td>
+                   <td>{{list.startDateTime}}</td>
+                   <td>{{list.endDateTime}}</td>
+                   
+                  
+                   <td>{{list.totalNoOfBusinessClassSeats}}</td>
+                   <td>{{list.totalNoOfNonBusinessClassSeats}}</td>
+                   <td>{{list.onewayPrice}}</td>
+                   <td>{{list.roundtripPrice}}</td>
+                   <td>{{list.noOfRows}}</td>
+                   <td>
+                       <button 
+                       type="button"
+                       class="btn btn-xs btn-primary"
+                       data-bs-toggle="modal" data-bs-target="#exampleModal"
+                       (click)="bookInfo(list)"
+                       >
+                        Book
+                       </button>
+                   </td>
+                   
+               </tr>
+           </tbody>
+        </table>
+    </div>
+</div>
+             
+        </div>
+    </div>
+
+    

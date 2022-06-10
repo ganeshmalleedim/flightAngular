@@ -1,0 +1,54 @@
+<p>getticket works!</p>
+<form [formGroup]="GetTicketForm">
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <b>Enter PNR Number</b>
+        <br/><br/>
+        <input class="form-control" 
+        style="margin-left: 20px;"
+        placeholder="Enter PNR Number Here"
+        type="number"
+        formControlName="pnr"
+        >
+        <br/><br/>
+        <button 
+        type="button"
+        class="btn btn-lg btn-primary btn-block text-center"
+        (click)="getTicket(GetTicketForm.value)"
+        >Login</button>
+    </div>
+    <div class="col-sm-4"></div>
+</div>
+</form>
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <table style="width: 100%;" class="table table-stripped ">
+           <thead style="background-color:lightgreen;">
+               <tr>
+                   <th>FlightNo</th>
+                   <th>FlightName</th>
+                   <th>Source</th>
+                   <th>Destination</th>
+                   <th>StartDatetime</th>
+                   <th>EndDateTime</th>
+                   <th>SeatNo</th>
+                </tr>
+           </thead>
+           <tbody>
+               <tr *ngFor="let list of ticketList">
+                   <td>{{list.flightNo}}</td>
+                   <td>{{list.flightName}}</td>
+                   <td>{{list.name}}</td>
+                   <td>{{list.source}}</td>
+                   <td>{{list.destination}}</td>
+                   <td>{{list.startDateTime}}</td>
+                   <td>{{list.endDatrTime}}</td>
+                   <td>{{list.seatNo}}</td>                   
+               </tr>
+           </tbody>
+        </table>
+    </div>
+</div>

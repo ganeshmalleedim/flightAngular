@@ -1,0 +1,154 @@
+<p>booking-flight works!</p>
+
+
+<form [formGroup]="bookFlightForm"> 
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="row" style="background-color:white;padding:10px;">
+                            <div class="col-sm-12">
+                                <h1>Book Flight Here</h1>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><b>FlightNo</b></div>
+                            <div class="col-sm-8">
+                                <input type="text" id="txtUName" name="txtUName"
+                                 class="form-control" 
+                                 placeholder="enter flghtno" formControlName="flightNo" />
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+
+                        <div class="row" style="margin-bottom:10px;">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-2"><b>Passenger Name</b></div>
+                        <div class="col-sm-8">
+                            <input type="text" id="txtUName" name="txtUName"
+                             class="form-control" 
+                             placeholder="enter name" formControlName="name" />
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                    <div class="row" style="margin-bottom:10px;">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-2"><b>PhoneNumber</b></div>
+                    <div class="col-sm-8">
+                        <input type="text" id="txtUName" name="txtUName"
+                         class="form-control" 
+                         placeholder="enter phone number" formControlName="phone" />
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+
+                <div class="row" style="margin-bottom:10px;">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-2"><b>Gender</b></div>
+                    <div class="col-sm-8">
+                        <input type="text" id="txtUName" name="txtUName"
+                         class="form-control" 
+                         placeholder="enter phone number" formControlName="gender" />
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><b> Flight_name</b></div>
+                            <div class="col-sm-8">
+                                <input type="text" id="txtPassword" 
+                                name="txtPassword" class="form-control" 
+                                placeholder="Enter flightname" 
+                                formControlName="Flightname"/>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><b> Source</b></div>
+                            <div class="col-sm-8">
+                                <input type="text" id="txtEmail" name="txtEmail" class="form-control"
+                                 placeholder="Enter source" formControlName="Source"/>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><b>Destination</b></div>
+                            <div class="col-sm-8">
+                                <input type="text" id="txtPhone" name="txtPhone" class="form-control" 
+                                placeholder="destinatiokn" formControlName="destination" />
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><b>startDateTime</b></div>
+                            <div class="col-sm-8">
+                                <input type="datetime-local" id="txtPhone" name="txtPhone" class="form-control" 
+                                placeholder="enter start place" formControlName="StartDateTime" />
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><b>EndDateTime</b></div>
+                            <div class="col-sm-8">
+                                <input type="datetime-local" id="txtPhone" name="txtPhone" class="form-control" 
+                                placeholder="enter end place" formControlName="EndDatrTime" />
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><b>Selectseat</b></div>
+                            <div class="col-sm-8">
+                                <input type="number" id="txtPhone" name="txtPhone" class="form-control" 
+                                placeholder="Phone Number" formControlName="SeatNo" />
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><b>Price</b></div>
+                            <div class="col-sm-8">
+                                <input type="number" id="txtPhone" name="txtPhone" class="form-control" 
+                                placeholder="Phone Number" formControlName="price" />
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                    
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-sm-1"></div>
+                            <div class="row" style="margin-bottom:10px;margin-left: 100px;">
+                                <div class="col-sm-3"></div>
+                                    <div class="col-sm-3">
+                                        <button type="button" id="btnRegister" value="Register"
+                                         class="btn-success" 
+                                         (click)=bookFlight(bookFlightForm.value)>Book</button>
+                                       
+                                    </div>
+                                    <div class="col-sm-3">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+       
+                            </div>
+                </div>
+            </div>
+    
+
+
+
+ 

@@ -1,0 +1,58 @@
+<p>get-airlines works!</p>
+
+<div class="row">
+    <div class="col-sm-12">
+        <table style="width: 100%;" class="table table-stripped ">
+           <thead>
+               <tr>
+                   <th>FlightNo</th>
+                   <th>FlightName</th>
+                   <th>FlightLogo</th>
+                   <th>Source</th>
+                   <th>Destination</th>
+                   <th>StartDatetime</th>
+                   <th>EndDateTime</th>
+                   <th>SheduleDays</th>
+                   <th>InstrumentsUsed</th>
+                   <th>Total_Bc_Seats</th>
+                   <th>Total_NBC_seats</th>
+                   <th>OnewayPrice</th>
+                   <th>RoundtripPrice</th>
+                   <th>NoOfRows</th>
+                   <th>MealVeg</th>
+                   <th>MealNonVeg</th>
+                   <th></th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr *ngFor="let list of AirlineList">
+                   <td>{{list.flightNo}}</td>
+                   <td>{{list.flightName}}</td>
+                   <td>{{list.flightLogo}}</td>
+                   <td>{{list.source}}</td>
+                   <td>{{list.destination}}</td>
+                   <td>{{list.startDateTime}}</td>
+                   <td>{{list.endDateTime}}</td>
+                   <td>{{list.sheduleDays}}</td>
+                   <td>{{list.instrumentsUsed}}</td>
+                   <td>{{list.totalNoOfBusinessClassSeats}}</td>
+                   <td>{{list.totalNoOfNonBusinessClassSeats}}</td>
+                   <td>{{list.onewayPrice}}</td>
+                   <td>{{list.roundtripPrice}}</td>
+                   <td>{{list.noOfRows}}</td>
+                   <td>{{list.mealVeg}}</td>
+                   <td>{{list.mealNonVeg}}</td>
+                   <td>
+                    <button 
+                    type="button"
+                    class="btn btn-xs btn-danger"
+                    (click)="blockAirline(list)"
+                    >
+                      Block
+                    </button>
+                </td>
+               </tr>
+           </tbody>
+        </table>
+    </div>
+</div>

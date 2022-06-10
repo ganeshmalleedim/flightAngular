@@ -1,0 +1,80 @@
+<p>user-register works!</p>
+<form [formGroup]="userRegisterForm">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-6">
+                       
+                        
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="row" style="background-color:white;padding:10px;">
+                            <div class="col-sm-12">
+                                <h1>Registration form</h1>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><b>UserName</b></div>
+                            <div class="col-sm-8">
+                                <input type="text" id="txtUName" name="txtUName"
+                                 class="form-control" 
+                                 placeholder="enter username" formControlName="username" />
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><b> Password</b></div>
+                            <div class="col-sm-8">
+                                <input type="password" id="txtPassword" 
+                                name="txtPassword" class="form-control" 
+                                placeholder="Enter Password" 
+                                formControlName="password"/>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><b> Name</b></div>
+                            <div class="col-sm-8">
+                                <input type="text" id="txtEmail" name="txtEmail" class="form-control"
+                                 placeholder="Enter Name of the user" formControlName="name"/>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"><b>PhoneNumber</b></div>
+                            <div class="col-sm-8">
+                                <input type="number" id="txtPhone" name="txtPhone" class="form-control" 
+                                placeholder="Phone Number" formControlName="phonenumber" />
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                    
+                        <div class="row" style="margin-bottom:10px;">
+                            <div class="col-sm-1"></div>
+                            <div class="row" style="margin-bottom:10px;margin-left: 100px;">
+                                <div class="col-sm-3"></div>
+                                    <div class="col-sm-3">
+                                        <button type="button" id="btnRegister" value="Register"
+                                         class="btn-success" (click)=UserRegister(userRegisterForm.value)>Register</button>
+                                       
+                                    </div>
+                                    <div class="col-sm-3">
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+       
+                            </div>
+                </div>
+            </div>
+    
+
+
+
+ 

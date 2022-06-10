@@ -1,0 +1,24 @@
+
+
+<div class="row" style="background-color :black;">
+    <div class="col-sm-3">
+      <button class="btn btn-danger" (click)="RegisterUser()">Register User</button>
+    </div>
+    <div class="col-sm-3">
+      <!-- <a routerLink="/getairlines" class="mystyle">GetAirlines</a> -->
+      <button class="btn btn-primary" (click)="UserLogin()">User Login</button>
+    </div>
+   <div class="col-sm-3">
+    <button class="btn btn-success" (click)="SearchClick()">SearchFlights</button> 
+    <!-- <a routerLink="/userdashboard/searchflights" class="mystyle">SearchFlight</a> -->
+   </div>
+   <div class="col-sm-3">
+    <button class="btn btn-success" (click)="getTicketDetails()">GetTicketDetails</button> 
+   </div>
+</div>
+
+  
+  
+  <div>
+      <router-outlet></router-outlet>
+  </div>

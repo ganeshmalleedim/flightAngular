@@ -1,0 +1,16 @@
+<p>admin-dash-board works!</p>
+
+<div class="row" style="background-color: aqua;">
+  <div class="col-sm-4">
+    <button class="btn btn-danger" (click)="addAirlineClick()">AddAirline</button>
+  </div>
+  <div class="col-sm-4">
+    <!-- <a routerLink="/getairlines" class="mystyle">GetAirlines</a> -->
+    <button class="btn btn-danger" (click)="getAirlineClick()">GetAirlines</button>
+  </div>
+ <div class="col-sm-4"></div>
+</div>
+
+<div>
+    <router-outlet></router-outlet>
+</div>

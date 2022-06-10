@@ -1,0 +1,34 @@
+<p>admin-login works!</p>
+
+<form [formGroup]="AdminLoginForm">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                           <input type="text" 
+                           placeholder="Admin User name" 
+                           formControlName="username"
+                           >
+                           <br/><br/>
+                           <input type="text"
+                            placeholder="Pasword" 
+                            formControlName="password"
+                            >
+                           <br/><br/>
+                           <button 
+                           type="button"
+                           class="btn btn-lg btn-primary btn-block text-center"
+                           (click)="AdiminLogin(AdminLoginForm.value)"
+                           >Login</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+    </div>
+</form>
+
